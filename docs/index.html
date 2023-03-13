@@ -5,7 +5,7 @@
         <meta charset=utf-8>
 
         <style>
-        * // {
+        *// {
           border: thin red dashed;
           box-sizing: border-box;
         }
@@ -15,6 +15,9 @@
           body {
             padding-top: 40px;
             padding-bottom: 40px; 
+            display: flex;
+            justify-content: center;
+            
           }
         </style>
         
@@ -24,6 +27,14 @@
             height: 128px;
             border-radius: 200px;
             object-fit: cover;
+            background-color: #f9f4ef;
+          }
+        </style>
+
+        <style>
+          .banner {
+          display: flex;
+          justify-content: center;
           }
         </style>
 
@@ -41,19 +52,22 @@
             width: 100%;
             height: 180px;
             border: none; 
-            
+            flex-grow: 2;
           }
         </style>
 
         <style>
-          body {
-            background-color: #f9f4ef;
+          .social-icons {
+            display: flex;
+            justify-content: space-around;
           }
         </style>
 
         <style>
           .name {
             color: #020826;
+            display: flex;
+            justify-content: center;
           }
         </style>
 
@@ -76,9 +90,9 @@
           .links a {
             color: #716040;
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            text-align: center;
+            flex-grow: 1;
+
         </style>
 
         <style>
@@ -98,6 +112,7 @@
           flex-direction: column;
           gap: 30px;
           max-width: 640px;
+          flex-grow: 1;
           }
         </style>
     </head>
