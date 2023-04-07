@@ -26,9 +26,11 @@
           .banner-image {
             width: 128px;
             height: 128px;
-            border-radius: 200px;
+            border-radius: 30px;
             object-fit: cover;
             background-color: #f9f4ef;
+            border: #716040 double;
+            border-width: 5px;
           }
         </style>
 
@@ -44,7 +46,7 @@
             width: 70px;
             height: 70px;
             object-fit: cover;
-            border-radius: 50px;
+            border-radius: 25px;
             border: #b8c1ec 1px solid;
           }
         </style>
@@ -83,22 +85,51 @@
             text-align: center;
           }
 
-        strong {
-        font-weight: bold;
-        color: #111214; /* Set the text color */
-        text-decoration: none; /* Add underline */
-        font-size: 16px; /* Increase font size */
-        /* font-family: Arial, sans-serif; /* Set font family */
-        /*background-color: #fcfcf6; /* Set background color */
-        /*I padding: 2px 4px; /* Add padding */
-        border-radius: 4px; /* Add border radius */
-      }
+          .intro strong {
+                font-weight: bold;
+                color: #111214;
+                text-decoration: none;
+                font-size: 16px;
+                border-radius: 4px;
+              }
 
-      /* Add hover effect */
-      strong:hover {
-        color: #eaddcf;
-        background-color: #716040;
-      }
+              /* Add hover effect */
+              strong:hover {
+                color: #eaddcf;
+                background-color: #716040;
+              }
+
+              .popup_data {
+                display: none;
+                display: none;
+                position: absolute;
+                top: 20px;
+                left: 0;
+                padding: 10px;
+                background-color: #fff;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+              }
+
+              .popup_sd {
+                display: none;
+                display: none;
+                position: absolute;
+                top: 20px;
+                left: 0;
+                padding: 10px;
+                background-color: #fff;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);   
+              }
+
+              /* Show the popup text when hovering over the strong element */
+              strong:hover ~ .popup_data {
+                display: block;
+              }
+
+              strong:hover + .popup_sd {
+                display: block;
+              }
+
         </style>
 
         <style>
@@ -116,7 +147,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 48px;
+            border-radius: 30px;
             padding: 10px;
             border:  #716040 1px solid;
             font-size: 20px;
@@ -182,9 +213,8 @@
       </div>
 
       <div class="intro">
-        <p> Hello, world! I'm Cam, my background is in <strong>Information Systems & Data Analytics.</strong> Now, I am pivoting into <strong>Software Development.</strong> Join me on my journey as I learn how to code. </p>
+        <p> Hello, world! I'm Cam, my background is in <strong>Information Systems & Data Analytics.</strong><span class="popup_data">R, SQL, SAS Enterprise Miner, PowerBI, Tableau, Salesforce</span> Now, I am pivoting into <strong>Software Development.</strong><span class="popup_sd">Ruby on Rails, CSS, HTML, JavaScript</span>Join me on my journey as I learn how to create applications. </p>
        </div>
-
 
       <div class="social-icons">
           <a href="https://github.com/camille-arce" target="_blank">
